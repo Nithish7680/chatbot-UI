@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/391827d54c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Whatsapp Clone</title>
+</head>
+<body>
+  <div class="background-green"></div>
+
+<div class="main-container">
+  <div class="left-container" id="left-container">
+    <!-- header -->
+    <div class="header">
+      <div class="logo-container">
+        <img class="logo" src="https://orailap.azurewebsites.net/Images/logo_orai.png" alt="Profile Picture">
+      </div>
+      <div class="nav-icons">
+        <li><i class="fa-solid fa-users" onclick="handleUsersClick()"></i></li>
+        <li><i class="fa-solid fa-message" id="message-icon" onclick="toggleRightContainer()"></i></li>
+        <li><i class="fa-solid fa-ellipsis-vertical" onclick="handleMoreClick()"></i></li>
+      </div>
+    </div>
+
+    <!-- notification -->
+    <div class="notif-box">
+      <i class="fa-solid fa-bell-slash"></i>
+      <div class="notif-text">
+        <p>Hi Nithish! I'm so glad that you are here</p>
+        <a href="#">Have a great day</a>
+      </div>
+      <i class="fa-solid fa-xmark" onclick="closeNotification()"></i>
+    </div>
+
+    <!-- search-container -->
+    <div class="search-container">
+      <div class="input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search or start new chat" id="search-input">
+      </div>
+      <i class="fa-sharp fa-solid fa-bars-filter"></i>
+    </div>
+
+    <!-- chats -->
+    <div class="chat-list" id="chat-list">
+      <!-- Chat boxes will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- Right container (hidden by default) -->
+  <div class="right-container hidden" id="right-container">
+    <!-- header -->
+    <div class="header">
+      <div class="img-text">
+        <button class="back-button" onclick="showChatList()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="user-img">
+          <img class="dp" id="chat-image" src="" alt="Profile Picture">
+        </div>
+        <h4 id="chat-name">Chat Name<br><span>Online</span></h4>
+      </div>
+      <div class="nav-icons">
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+      </div>
+    </div>
+
+    <!-- chat-container -->
+    <div class="chat-container" id="chat-container">
+      <!-- Messages will be dynamically inserted here -->
+    </div>
+
+    <!-- input-bottom -->
+    <div class="chatbox-input">
+        <i class="fa-regular fa-face-grin" id="emoji-btn" aria-hidden="true"></i>
+        <i class="fa-sharp fa-solid fa-paperclip" id="attachment-btn" aria-hidden="true"></i>
+        <input type="text" id="message-input" placeholder="Type a message">
+        <i class="fa-solid fa-microphone" id="mic-btn" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
